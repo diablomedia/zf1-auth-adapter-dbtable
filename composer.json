@@ -38,6 +38,7 @@
     "scripts": {
         "test": "phpunit",
         "test-with-coverage": "phpunit --coverage-clover=clover.xml",
-        "phpstan": "phpstan analyze -l7 -c phpstan.neon --no-progress ./ --ansi"
+        "phpstan": "phpstan analyze -l7 -c phpstan.neon --no-progress ./ --ansi",
+        "style-check": "php-cs-fixer fix --dry-run -vv"
     }
 }
