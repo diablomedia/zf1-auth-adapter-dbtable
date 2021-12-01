@@ -192,7 +192,7 @@ class Zend_Auth_Adapter_DbTable_BasicSqliteTest extends PHPUnit\Framework\TestCa
         $this->_adapter->setCredential('my_password');
         $result    = $this->_adapter->authenticate();
         $resultRow = $this->_adapter->getResultRowObject(null, 'password');
-        $this->assertEquals('O:8:"stdClass":3:{s:2:"id";s:1:"1";s:8:"username";s:11:"my_username";s:9:"real_name";s:12:"My Real Name";}', serialize($resultRow));
+        $this->assertEquals('O:8:"stdClass":3:{s:2:"id";i:1;s:8:"username";s:11:"my_username";s:9:"real_name";s:12:"My Real Name";}', serialize($resultRow));
     }
 
     /**
