@@ -118,7 +118,7 @@ class Zend_Auth_Adapter_DbTable implements Zend_Auth_Adapter_Interface
      * @param  string                   $credentialTreatment
      */
     public function __construct(
-        Zend_Db_Adapter_Abstract $zendDb = null,
+        ?Zend_Db_Adapter_Abstract $zendDb = null,
         $tableName = null,
         $identityColumn = null,
         $credentialColumn = null,
@@ -150,7 +150,7 @@ class Zend_Auth_Adapter_DbTable implements Zend_Auth_Adapter_Interface
      * @throws Zend_Auth_Adapter_Exception
      * @return $this
      */
-    protected function _setDbAdapter(Zend_Db_Adapter_Abstract $zendDb = null)
+    protected function _setDbAdapter(?Zend_Db_Adapter_Abstract $zendDb = null)
     {
         /**
          * If no adapter is specified, fetch default database adapter.
